@@ -22,7 +22,15 @@ fun main(args: Array<String>) {
         name = "test"
         street = "street"
     }
-
+    listOf(1,2,3).apply {
+        println(get(0))
+        println(get(1))
+        println(get(2))
+        println("print 10 fold")
+        stream().map { it * 10}.forEach { println(it) }
+        println("print Odd number")
+        stream().filter{ it % 2 == 1}.forEach { println(it)}
+    }
     log {
         add.name
     }
